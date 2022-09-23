@@ -1,12 +1,5 @@
-let bmp = require('bmp-js');
 let fs = require('fs');
-let bmpBuffer = fs.readFileSync('star.bmp');
-let bmpData = bmp.decode(bmpBuffer);
+const fileNames = process.argv.slice(2);
+let bmpBuffer = fs.readFileSync(fileNames[0] + '.bmp');
 
-let data = {
-  data: bmpData.buffer,
-  width: bmpData.width,
-  height: bmpData.height,
-};
-
-fs.writeFileSync('./image.bmp', data.data);
+fs.writeFileSync(fileNames[1] + '.bmp', bmpBuffer);
