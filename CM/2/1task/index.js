@@ -5,47 +5,24 @@ let A = [
   [14.2, 23.4, -8.8, 5.3, 7.2],
 ];
 
-function gaussianElimination() {
-  for (let i = 0; i < 4; i++) {
-    for (let j = i + 1; j < 4; j++) {
-      let c = A[j][i] / A[i][i];
-      for (let k = i + 1; k < 5; k++) {
-        A[j][k] = A[j][k] - A[i][k] * c;
-      }
-      A[j][i] = 0;
+for (let i = 0; i < 4; i++) {
+  for (let j = i + 1; j < 4; j++) {
+    let c = A[j][i] / A[i][i];
+    for (let k = i + 1; k < 5; k++) {
+      A[j][k] = A[j][k] - A[i][k] * c;
     }
+    A[j][i] = 0;
   }
 }
+let x1 = Math.round((A[3][4] / A[3][3]) * 1000) / 1000;
+let x2 = Math.round(((A[2][4] - A[2][3] * x1) / A[2][2]) * 1000) / 1000;
+let x3 =
+  Math.round(((A[1][4] - A[1][3] * x1 - A[1][2] * x2) / A[1][1]) * 1000) / 1000;
+let x4 =
+  Math.round(
+    ((A[0][4] - A[0][3] * x1 - A[0][2] * x2 - A[0][1] * x3) / A[0][0]) * 1000
+  ) / 1000;
 
-function createDiagonalMatrix() {
-  for (let i = 3; i >= 0; i--) {
-    let x = A[i][4] / A[i][i];
-    for (let j = i - 1; j >= 0; j--) {
-      A[j][4] -= x * A[j][i];
-      A[j][i] = 0;
-    }
-    A[i][4] = x;
-    A[i][i] = 1;
-  }
-}
+console.log(x1, x2, x3, x4);
 
-function getResult() {
-  let x = [];
-  for (let i = 0; i < 4; i++) {
-    x.push(Math.round(A[i][4] * 1000) / 1000);
-  }
-  return x;
-}
-
-function solve() {
-  gaussianElimination();
-  createDiagonalMatrix();
-  let x = getResult();
-  return x;
-}
-
-let x = solve(A);
-
-console.log(...x);
-
-// Result is: 0.445 0.067 0.869 1.312
+// Result is: 0.443 0.066 0.869 1.312

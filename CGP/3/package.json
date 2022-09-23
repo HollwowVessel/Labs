@@ -1,5 +1,5 @@
 {
-  "name": "1",
+  "name": "3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "lz77": "^1.1.0"
+  }
 }
