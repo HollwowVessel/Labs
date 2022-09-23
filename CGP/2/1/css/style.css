@@ -1,0 +1,12 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+input {
+  margin-bottom: 10px;
+  margin-right: 5px;
+  outline: none;
+  border-radius: 20px;
+}
