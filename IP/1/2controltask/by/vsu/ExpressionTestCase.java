@@ -19,27 +19,27 @@ public class ExpressionTestCase {
 	@Test
 	public void testGetPositiveIntegers() {
 		Assert.assertEquals(
-				-8, // ожидаемый результат
-				Runner.expression(1, 2, 3), // вызов тестируемого методы
-				0.0000000001 // для вещественных чисел погрешность сравнения
+				0.4387, // ожидаемый результат
+				Runner.calculateRow(0.5, 0.01), // вызов тестируемого методы
+				0.01 // для вещественных чисел погрешность сравнения
 		);
 	}
 
 	@Test
 	public void testGetNegativeIntegers() {
 		Assert.assertEquals(
-				-8,
-				Runner.expression(-1, -2, -3),
-				0.0000000001
+				0.5403,
+				Runner.calculateRow(1, 0.01),
+				0.01
 		);
 	}
 
 	@Test
 	public void testGetMixedNumbers() {
 		Assert.assertEquals(
-				16,
-				Runner.expression(1, 2, -3),
-				0.0000000001
+				0.196,
+				Runner.calculateRow(0.2, 0.01),
+				0.01
 		);
 	}
 }

@@ -1,0 +1,1 @@
+java -cp calc.jar InfixToPolizConverter b*b-4*a*c | java -jar calc.jar a=3 b=5 c=6
