@@ -141,7 +141,7 @@
 </Output><Text-field style="Text" layout="Normal">A:=0.003</Text-field>
 </Group>
 <Group hide-input="false" labelreference="L11" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
-<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">`\320\236\321\202\320\262\320\265\321\202`: \320\222 \321\207\320\270\321\201\320\273\320\265 x, \321\206\320\270\321\204\321\200\321\213 3, 9 \321\217\320\262\320\273\321\217\321\216\321\202\321\201\321\217 \320\267\320\275\320\260\321\207\320\260\321\211\320\260\320\274\320\270 \320\270 \320\262\320\265\321\200\320\275\321\213\320\274\320\270</Font></Text-field>
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">`\320\236\321\202\320\262\320\265\321\202`: \320\222 \321\207\320\270\321\201\320\273\320\265 x, \321\206\320\270\321\204\321\200\321\213 3, 9 \321\217\320\262\320\273\321\217\321\216\321\202\321\201\321\217 \320\267\320\275\320\260\321\207\320\260\321\211\320\260\320\274\320\270</Font></Text-field>
 </Input><Text-field style="Text" layout="Normal"></Text-field>
 </Group>
 <Group labelreference="L12" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
@@ -167,7 +167,7 @@
 </Output><Text-field style="Text" layout="Normal">A:=0.0019</Text-field>
 </Group>
 <Group hide-input="false" labelreference="L16" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
-<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">\320\236\321\202\320\262\320\265\321\202: \320\222 \321\207\320\270\321\201\320\273\320\265 a \320\267\320\275\320\260\321\207\320\260\321\211\320\270\320\265 \321\206\320\270\321\204\321\200\321\213 1, 8, 9, 2 \320\270 \320\262\320\265\321\200\320\275\321\213\320\274\320\270;</Font></Text-field>
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">\320\236\321\202\320\262\320\265\321\202: \320\222 \321\207\320\270\321\201\320\273\320\265 a \320\267\320\275\320\260\321\207\320\260\321\211\320\270\320\265 \321\206\320\270\321\204\321\200\321\213 1, 8, 9, 2;</Font></Text-field>
 </Input><Text-field style="Text" layout="Normal"></Text-field>
 <Output><Text-field style="HyperlinkError" layout="HyperlinkError"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Error,%20missing%20operator%20or%20%60%3B%60" hyperlink="true"><Font style="HyperlinkError">Error, missing operator or `;`</Font></Hyperlink></Text-field>
 </Output>

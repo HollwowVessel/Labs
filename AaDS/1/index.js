@@ -7,6 +7,8 @@ function fact(n) {
 	return res;
 }
 
+//Сложность O(n), временная сложность T(n), Емкостная сложность S(n + 2), Число арифметических операций n+m, алгоритм полиномиальный
+
 function factTree(n) {
 	if (n < 0) return 0;
 	if (n === 0) return 1;
@@ -20,6 +22,7 @@ function factTree(n) {
 	}
 	return prodTree(2, n);
 }
+//Сложность O(log2n), временная сложность T(log2n), Емкостная сложность S(n + 3), Число арифметических операций n^2, алгоритм полиномиальный
 
 console.log(fact(50));
 console.log(factTree(50));
