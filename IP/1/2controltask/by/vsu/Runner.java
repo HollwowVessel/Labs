@@ -14,29 +14,27 @@ public class Runner {
 			res *= i;
 		}
 		return res;
-
-	}
-	public static double pow(double x, double n){
-		double res = x;
-		for(int i = 0; i < n; i++){
-			res *= x;
-		}
-		return res;
 	}
 
-	public static double calculateRow(double x, double prec) {
-
-		double res = 0;
-		for(int i = 0; i < prec; i++){
-			res += pow(x, i) / fact(i);
+	public static double calculateRow(double x, double e) {
+		int n = 2;
+		double a = -1 * Math.pow(x, 3) / fact(3), b = x;
+		double s = a + b;
+		int sign = 1;
+		while (Math.abs(a - b) > e){
+			b = a;
+			a = sign * Math.pow(x, 2*n + 1) / fact(2 * n + 1);
+			sign *= -1;
+			s += a;
+			n++;
 		}
-		return res;
+		return s;
 	}
 
 	public static void main(String[] args) {
 		double x = Double.parseDouble(args[0]);
 		double prec = Double.parseDouble(args[1]);
 		System.out.println(calculateRow(x, prec));
-		System.out.println(pow(2.71, x));
+		System.out.println(Math.sin(x));
 	}
 }
