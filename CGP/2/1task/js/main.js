@@ -1,9 +1,10 @@
-const r = document.getElementById('r');
-const g = document.getElementById('g');
-const b = document.getElementById('b');
-const x = document.getElementById('x');
-const y = document.getElementById('y');
-const z = document.getElementById('z');
+"use strict";
+const r = document.getElementById("r");
+const g = document.getElementById("g");
+const b = document.getElementById("b");
+const x = document.getElementById("x");
+const y = document.getElementById("y");
+const z = document.getElementById("z");
 
 function convertRGB() {
   if (r.value > 255) r.value = 255;
@@ -32,6 +33,6 @@ function convertRGB() {
   z.value = Math.round((R * 0.0193 + G * 0.1192 + B * 0.9505) * 100) / 100;
 }
 
-r.addEventListener('keyup', convertRGB);
-g.addEventListener('keyup', convertRGB);
-b.addEventListener('keyup', convertRGB);
+r.addEventListener("keyup", convertRGB);
+g.addEventListener("keyup", convertRGB);
+b.addEventListener("keyup", convertRGB);
