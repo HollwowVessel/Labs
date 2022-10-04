@@ -14,9 +14,13 @@ let prec = 10 ** (String(E).length - 2);
 
 function gaussianElimination() {
   for (let i = 0; i < A.length; i++) {
+    let temp = A[i][i];
+    for (let k = 0; k < A.length + 1; k++) {
+      A[i][k] = A[i][k] / temp;
+    }
     for (let j = 0; j < A.length; j++) {
       if (i !== j) {
-        let temp = A[j][i] / A[i][i];
+        let temp = A[j][i];
         for (let k = 0; k < A.length + 1; k++) {
           A[j][k] -= temp * A[i][k];
         }
@@ -24,21 +28,20 @@ function gaussianElimination() {
     }
   }
 }
-
 function getResult() {
-  let x = [];
+  let res = [];
   for (let i = 0; i < A.length; i++) {
-    x.push(Math.round((A[i][3] / A[i][i]) * prec) / prec);
+    res.push(Math.round(A[i][3] * prec) / prec);
   }
-  return x;
+  return res;
 }
 
 function solve() {
   gaussianElimination();
-  x = getResult();
-  return x;
+  let res = getResult();
+  return res;
 }
 res = solve();
 console.log(...res);
-
 // Result is: 1.3309, 0.6931, 1.8022
+
