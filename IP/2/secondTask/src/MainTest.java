@@ -5,7 +5,7 @@ import static org.testng.Assert.assertEquals;
 class MainTest {
 
     @org.junit.jupiter.api.Test
-    void basicTest() {
+     void basicTest() {
         assertEquals(Main.delete("Hello /*World!*/"), "Hello");
     }
     @org.junit.jupiter.api.Test
