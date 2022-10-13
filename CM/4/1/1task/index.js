@@ -9,10 +9,10 @@ let A = [
   [0.71, -0.65, -0.18, 0.17],
   [1.17, -2.35, 0.75, 1.28],
 ];
-let E = 0.0001;
+let E = 0.001;
 let prec = 10 ** (String(E).length - 2);
 
-function gaussianElimination() {
+function jordanoElimination() {
   for (let i = 0; i < A.length; i++) {
     let temp = A[i][i];
     for (let k = 0; k < A.length + 1; k++) {
@@ -37,7 +37,8 @@ function getResult() {
 }
 
 function solve() {
-  gaussianElimination();
+  jordanoElimination();
+  console.log(A);
   let res = getResult();
   return res;
 }
