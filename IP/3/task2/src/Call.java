@@ -4,10 +4,9 @@ import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Call implements Serializable  {
-    private int outgoingPhoneNumber;
-    static int quantity;
+    private String outgoingPhoneNumber;
     private int id;
-    private int incomingPhoneNumber;
+    private String incomingPhoneNumber;
     private Calendar date;
     private int callDuration;
 
@@ -27,11 +26,11 @@ public class Call implements Serializable  {
         return callDuration;
     }
 
-    public int getIncomingPhoneNumber() {
+    public String getIncomingPhoneNumber() {
         return incomingPhoneNumber;
     }
 
-    public int getOutgoingPhoneNumber() {
+    public String getOutgoingPhoneNumber() {
         return outgoingPhoneNumber;
     }
 
@@ -43,11 +42,11 @@ public class Call implements Serializable  {
         this.date = date;
     }
 
-    public void setIncomingPhoneNumber(int incomingPhoneNumber) {
+    public void setIncomingPhoneNumber(String incomingPhoneNumber) {
         this.incomingPhoneNumber = incomingPhoneNumber;
     }
 
-    public void setOutgoingPhoneNumber(int outgoingPhoneNumber) {
+    public void setOutgoingPhoneNumber(String outgoingPhoneNumber) {
         this.outgoingPhoneNumber = outgoingPhoneNumber;
     }
     public void setCalendar(){
@@ -65,6 +64,7 @@ public class Call implements Serializable  {
         int minute = scanner.nextInt();
         System.out.print("Input a second of a call: ");
         int second = scanner.nextInt();
+
         calendar.set(Calendar.YEAR, year);
         calendar.set(Calendar.MONTH, month);
         calendar.set(Calendar.DAY_OF_MONTH, day);
@@ -77,12 +77,11 @@ public class Call implements Serializable  {
     public void createCall(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input an incoming number: ");
-        int incoming = scanner.nextInt();
+        String incoming = scanner.next();
         System.out.print("Input an outgoing number: ");
-        int outgoing = scanner.nextInt();
+        String outgoing = scanner.next();
         System.out.print("Input a duration of call: ");
-        int duration = scanner.nextInt();
-        this.callDuration = duration;
+        this.callDuration = scanner.nextInt();
         this.incomingPhoneNumber = incoming;
         this.outgoingPhoneNumber = outgoing;
         this.setCalendar();
@@ -93,6 +92,6 @@ public class Call implements Serializable  {
         return this.incomingPhoneNumber + " " +
                 this.outgoingPhoneNumber + " " +
                 this.callDuration +  " " +
-                this.date.getTime().toString() + " ";
+                this.date.getTime() + " id: " + this.id;
     }
 }
